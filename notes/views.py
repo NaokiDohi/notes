@@ -4,7 +4,7 @@ from . import serializers
 
 # Create your views here.
 
-class NoteList(generics.ListAPIView):
+class NoteList(generics.ListCreateAPIView):
     queryset = models.Note.objects.all()
     serializer_class = serializers.NoteSerializer
 
